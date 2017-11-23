@@ -13,7 +13,7 @@ RUN set -x \
 	&& gem install sass \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global config minimum-stability beta \
-    && composer global require typo3/surf:^2.0.0 \
+    && composer global require typo3/surf:dev-master \	
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
