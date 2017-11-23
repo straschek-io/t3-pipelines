@@ -2,30 +2,29 @@
 
 To make this clear: I have no clue about docker. 
 
-But: I was stressed out from waiting for my pipelines to finish, running apt-get commands in the pipeline was costing too much time.  
-So, I googled it.
+But: I was stressed out from waiting for my pipelines to finish, running apt-get commands in the pipeline was costing too much time. So, I googled it.
 
-This docker image fulfils my personal needs for deployment of TYPO3 via gitlab-ci & bitbucket pipelines.
+This docker image fulfils my personal needs for deployment of TYPO3 via gitlab-ci & bitbucket pipelines.  
 Works for me, may work for you.
 
 ## Features
 
-PHP 7.1 (See other branches/docker tags for 7.0 and 5.6)
-Composer 1.5.2
-TYPO3 Surf (dev-master)
-node 8.9.1
-npm 5.5.1
-yarn 1.3.2
-grunt-cli 1.2.0
-bower 1.8.2
+PHP 7.1 (See other branches/docker tags for 7.0 and 5.6)  
+Composer 1.5.2  
+TYPO3 Surf (dev-master)  
+node 8.9.1  
+npm 5.5.1  
+yarn 1.3.2  
+grunt-cli 1.2.0  
+bower 1.8.2  
 Sass 3.5.3 (Bleeding Edge)
 
 ### PHP versions
 
-uxktn/t3-pipelines:latest (currently php 7.1)  
-uxktn/t3-pipelines:php71
-uxktn/t3-pipelines:php70
-uxktn/t3-pipelines:php56
+`uxktn/t3-pipelines` or `uxktn/t3-pipelines:latest` (currently php 7.1)  
+`uxktn/t3-pipelines:php71`  
+`uxktn/t3-pipelines:php70`  
+`uxktn/t3-pipelines:php56`  
 
 ### Example for bitbucket pipelines
 ```
@@ -100,8 +99,8 @@ deploy:
 https://hub.docker.com/r/uxktn/t3-pipelines/
 
 ### Inspiration, blueprints, information while poking around in the dark
-https://github.com/edbizarro/bitbucket-pipelines-php7
-https://confluence.atlassian.com/bitbucket/debug-your-pipelines-locally-with-docker-838273569.html
-https://unix.stackexchange.com/a/359801
-https://stackoverflow.com/a/38553499
+https://github.com/edbizarro/bitbucket-pipelines-php7  
+https://confluence.atlassian.com/bitbucket/debug-your-pipelines-locally-with-docker-838273569.html  
+https://unix.stackexchange.com/a/359801  
+https://stackoverflow.com/a/38553499  
 
