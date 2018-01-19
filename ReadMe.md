@@ -11,9 +11,10 @@ Works for me, may work for you.
 
 PHP 7.1 (See other branches/docker tags for 7.0 and 5.6)  
 Composer 1.5.2  
-TYPO3 Surf (dev-master)  
-node 8.9.1  
-npm 5.5.1  
+TYPO3 Surf (dev-master) 
+Deployer 
+node 8.9.4  
+npm 5.6.0
 yarn 1.3.2  
 grunt-cli 1.2.0  
 bower 1.8.2  
