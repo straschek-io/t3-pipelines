@@ -19,8 +19,7 @@ RUN curl -O https://rubygems.org/rubygems/rubygems-3.1.3.tgz \
     && gem install sass
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && composer global config minimum-stability beta \
-    && composer global require typo3/surf:dev-master
+    && composer global require typo3/surf:^2
 
 RUN composer global require deployer/deployer
 
