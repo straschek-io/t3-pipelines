@@ -9,7 +9,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN set -x \
     && apt-get update -y \
-    && apt-get install ruby-dev rubygems openssh-client apt-transport-https sudo git rsync zip unzip -yqq --no-install-recommends \
+    && apt-get install ruby-dev rubygems openssh-client apt-transport-https sudo git rsync zip unzip expect -yqq --no-install-recommends \
 	&& apt-get install gnupg -yqq --no-install-recommends
 
 RUN gem install sass
