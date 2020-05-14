@@ -24,8 +24,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer global require deployer/deployer
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
-	&& echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-RUN	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+ 	&& echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+RUN	curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 RUN apt-get update -y \
 	&& apt-get install -y nodejs yarn
