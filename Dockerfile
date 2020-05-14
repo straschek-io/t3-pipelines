@@ -12,7 +12,11 @@ RUN set -x \
     && apt-get install ruby-dev rubygems openssh-client apt-transport-https sudo git rsync zip unzip expect -yqq --no-install-recommends \
 	&& apt-get install gnupg -yqq --no-install-recommends
 
-RUN gem install sass
+RUN curl -O https://rubygems.org/rubygems/rubygems-3.1.3.tgz \
+    && tar xf rubygems-3.1.3.tgz \
+    && cd rubygems-3.1.3 \
+    && ruby setup.rb \
+    && gem install sass
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global config minimum-stability beta \
