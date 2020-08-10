@@ -10,15 +10,15 @@ Works for me, may work for you.
 ## Features
 
 PHP 7.3.17 (See other branches/docker tags for e.g. 7.2)  
-Composer 1.10.6  
-Surf 2.0.2  
-Deployer  
+Composer 1.10.10  
+Surf 2.1.1  
+Deployer 6.8  
+sass 1.26.10 compiled with dart2js 2.8.4  
 node 12.18.3  
 npm 6.14.4  
 yarn 1.22.4  
 grunt-cli 1.3.2  
 bower 1.8.8  
-(Ruby) Sass 3.7.4 (Bleeding Edge)  
 
 ### PHP versions
 
@@ -106,4 +106,3 @@ https://github.com/edbizarro/bitbucket-pipelines-php7
 https://confluence.atlassian.com/bitbucket/debug-your-pipelines-locally-with-docker-838273569.html
 https://unix.stackexchange.com/a/359801
 https://stackoverflow.com/a/38553499
-
