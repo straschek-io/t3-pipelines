@@ -12,12 +12,6 @@ RUN set -x \
     && apt-get install ruby-dev rubygems openssh-client apt-transport-https sudo git rsync zip unzip expect -yqq --no-install-recommends \
 	&& apt-get install gnupg -yqq --no-install-recommends
 
-RUN curl -O https://rubygems.org/rubygems/rubygems-3.1.3.tgz \
-    && tar xf rubygems-3.1.3.tgz \
-    && cd rubygems-3.1.3 \
-    && ruby setup.rb \
-    && gem install sass
-
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require typo3/surf:^2
 
@@ -32,13 +26,14 @@ RUN apt-get update -y \
 
 RUN sudo npm install -g grunt-cli
 RUN npm install -g bower --allow-root
+RUN npm install -g sass
 
 RUN rm -rf /var/lib/apt/lists/*
 
 # confirm installation
 RUN php -v
 RUN composer --version
-RUN sass -v
 RUN node -v
+RUN sass --version
 RUN npm -v
 RUN yarn -v
