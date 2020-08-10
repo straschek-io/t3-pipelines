@@ -13,7 +13,7 @@ PHP 7.3.17 (See other branches/docker tags for e.g. 7.2)
 Composer 1.10.6  
 Surf 2.0.2  
 Deployer  
-node 10.20.1  
+node 12.18.3  
 npm 6.14.4  
 yarn 1.22.4  
 grunt-cli 1.3.2  
