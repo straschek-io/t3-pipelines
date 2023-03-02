@@ -12,7 +12,7 @@ RUN set -x \
     && apt-get install ruby-dev rubygems openssh-client apt-transport-https sudo git rsync zip unzip expect -yqq --no-install-recommends \
 	&& apt-get install gnupg -yqq --no-install-recommends
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --2.2 \
     && composer global require typo3/surf:^2
 
 RUN composer global require deployer/deployer
