@@ -13,7 +13,7 @@ RUN set -x \
 	&& apt-get install gnupg -yqq --no-install-recommends
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && composer global require typo3/surf:^2
+    && composer global require typo3/surf:^3
 
 RUN composer global require deployer/deployer
 
