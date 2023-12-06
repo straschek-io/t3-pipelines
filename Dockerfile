@@ -1,4 +1,4 @@
-FROM php:7.4
+FROM php:8.2
 
 RUN apt-get update \
 	&& apt-get install -y locales locales-all
@@ -12,20 +12,16 @@ RUN set -x \
     && apt-get install ruby-dev rubygems openssh-client apt-transport-https sudo git rsync zip unzip expect -yqq --no-install-recommends \
 	&& apt-get install gnupg -yqq --no-install-recommends
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --2.2 \
-    && composer global require typo3/surf:^2
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN composer global require typo3/surf
 RUN composer global require deployer/deployer
 
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
- 	&& echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-RUN	curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+RUN apt-get update -y && apt-get install -y nodejs
+RUN apt-get update -y && apt-get install -y npm
 
-RUN apt-get update -y \
-	&& apt-get install -y nodejs yarn
-
-RUN sudo npm install -g grunt-cli
-RUN npm install -g bower --allow-root
+RUN npm install -g grunt-cli
+RUN npm install -g yarn
 RUN npm install -g sass
 
 RUN rm -rf /var/lib/apt/lists/*
@@ -37,3 +33,5 @@ RUN node -v
 RUN sass --version
 RUN npm -v
 RUN yarn -v
+RUN composer global show typo3/surf
+RUN composer global show deployer/deployer

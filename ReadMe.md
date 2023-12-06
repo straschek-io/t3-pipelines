@@ -9,25 +9,14 @@ Works for me, may work for you.
 
 ## Features
 
-PHP 7.4.23 (See other branches/docker tags for e.g. 7.2)  
-Composer 2.1.6  
-Surf 2.3.2  
-Deployer 6.8.0  
-sass 1.39.0 compiled with dart2js 2.13.4  
-node 12.22.6  
-npm 6.14.15  
-yarn 1.22.5  
-grunt-cli 1.3.2  
-bower 1.8.22  
-
-### PHP versions
-
-`uxktn/t3-pipelines` or `uxktn/t3-pipelines:latest` (currently php 7.4)  
-`uxktn/t3-pipelines:php73`  
-`uxktn/t3-pipelines:php72`  
-`uxktn/t3-pipelines:php71`  
-`uxktn/t3-pipelines:php70`  
-`uxktn/t3-pipelines:php56`  
+PHP 8.2.13 (cli)
+Composer 2.6.5
+Surf 3.4.6
+Deployer 7.3.3
+node 18.13.0
+sass 1.69.5 compiled with dart2js 3.1.5
+npm 9.2.0
+yarn 1.22.21
 
 ### Example for bitbucket pipelines
 ```
