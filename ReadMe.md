@@ -13,7 +13,7 @@ PHP 8.2.13 (cli)
 Composer 2.6.5
 Surf 3.4.6
 Deployer 7.3.3
-node 16.20.2
+node 14.21.3
 sass 1.69.5 compiled with dart2js 3.1.5
 npm 9.2.0
 yarn 1.22.21
