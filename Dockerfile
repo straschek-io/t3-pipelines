@@ -25,7 +25,7 @@ RUN npm install -g yarn
 RUN npm install -g sass
 
 RUN npm install -g n
-RUN n 12
+RUN n 20
 
 RUN rm -rf /var/lib/apt/lists/*
 
